@@ -51,3 +51,28 @@ function doSomething(x: string[]) {
 	x[0] = "Bahaa"; // ✅
 }
 ```
+
+## 5. Unions & Intersections
+
+You might want to get a value but not sure about the input you get, in that case you can use the **Union operator "|"**.
+
+```ts
+type User = {
+	age: number | string;
+	// or even going further with multible data types
+	age: number | string | boolean | User;
+};
+```
+
+For **Intersection** you can use the **& operator** in _types_ or extends for _interface_. It allows you to combine multiple datatypes and extends their features.
+
+```ts
+type User = {
+	age: number;
+	name: string;
+};
+
+type UserAdmin = user & {
+	adminId: string;
+};
+```
