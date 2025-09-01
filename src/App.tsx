@@ -3,9 +3,14 @@ import { useState } from "react";
 import Card from "./components/TypingComponentProps-1";
 import Children from "./components/TypingChildrenProp-2";
 import SetterFunctions from "./components/SetterFunctions-3";
+import TypingFunctions from "./components/TypingFunctions-4";
 
 export default function App() {
 	const [count, setCount] = useState(0);
+
+	function alertMessage(message: string) {
+		alert(message);
+	}
 
 	return (
 		<>
@@ -21,6 +26,10 @@ export default function App() {
 
 			<div>
 				<SetterFunctions setCount={setCount} /> {count}
+			</div>
+
+			<div>
+				<TypingFunctions alertMessage={alertMessage} />
 			</div>
 		</>
 	);
