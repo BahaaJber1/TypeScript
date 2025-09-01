@@ -64,7 +64,7 @@ type User = {
 };
 ```
 
-For **Intersection** you can use the **& operator** in _types_ or extends for _interface_. It allows you to combine multiple datatypes and extends their features.
+For **Intersection** you can use the **& operator** in _types_ or **extends** for _interface_. It allows you to combine multiple datatypes and extends their features.
 
 ```ts
 type User = {
