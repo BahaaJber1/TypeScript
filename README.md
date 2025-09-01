@@ -19,6 +19,23 @@ It can be a number, string, array, object, any, null, undifined, etc..., meaning
 
 ```ts
 function doSomething(x: number, y: string, z: boolean) {
-	y.toFixed(); // You won't be able to access this line cause y is assigned to string and toFixed method is for number!
+	// You won't be able to access this line cause y is assigned to string and toFixed method is for number!
+	y.toFixed();
+}
+```
+
+## 3. Object Types
+
+But what if I want the parameter to be an **object** and not just a simple value? We need to use type/interface for this. It's like declaring our own datatype.
+
+```ts
+type User = {
+	name: string;
+	age: number;
+	isAdmin?: boolean; // You can make some properties optional by adding "?" after the variable
+};
+
+function doSomething(userObject: User) {
+	// ...
 }
 ```
