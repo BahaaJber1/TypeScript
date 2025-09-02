@@ -5,6 +5,7 @@ import Children from "./components/TypingChildrenProp-2";
 import SetterFunctions from "./components/SetterFunctions-3";
 import TypingFunctions from "./components/TypingFunctions-4";
 import ObjectAsProps from "./components/ObjectsAsProps-5";
+import UnionsForTailwind from "./components/UnionsForTailwind-6";
 
 export default function App() {
 	const [count, setCount] = useState(0);
@@ -44,6 +45,12 @@ export default function App() {
 				{users.map((user) => {
 					return <ObjectAsProps user={user} />;
 				})}
+			</div>
+
+			<div>
+				{/* You can't use different values rather than the ones we specifed before */}
+				<UnionsForTailwind color="red" size="lg" />
+				<UnionsForTailwind color="purple" size="md" />
 			</div>
 		</>
 	);
