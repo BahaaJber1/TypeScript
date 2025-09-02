@@ -7,6 +7,18 @@ import TypingFunctions from "./components/TypingFunctions-4";
 import ObjectAsProps from "./components/ObjectsAsProps-5";
 import UnionsForTailwind from "./components/UnionsForTailwind-6";
 import EventHandlers from "./components/EventHandlers-7";
+import { useFetch } from "./hooks/useFetch-8";
+
+type User = {
+	name: string;
+	age: number;
+};
+
+type BlogPost = {
+	title: string;
+	description: string;
+	posted: Date;
+};
 
 export default function App() {
 	const [count, setCount] = useState(0);
@@ -20,6 +32,9 @@ export default function App() {
 	function alertMessage(message: string) {
 		alert(message);
 	}
+
+	const user = useFetch<User>("Whatever");
+	const blogPost = useFetch<BlogPost>("Whatever");
 
 	return (
 		<>
