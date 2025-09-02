@@ -15,7 +15,7 @@ export default function App() {
 		{ name: "Austin", age: 26 },
 		{ name: "arter", age: 24 },
 		{ name: "Julia", age: 23 },
-	];
+	] as const; // Adding this making it read only and you can't mutate it
 
 	function alertMessage(message: string) {
 		alert(message);
