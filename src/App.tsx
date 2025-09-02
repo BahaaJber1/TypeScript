@@ -6,6 +6,7 @@ import SetterFunctions from "./components/SetterFunctions-3";
 import TypingFunctions from "./components/TypingFunctions-4";
 import ObjectAsProps from "./components/ObjectsAsProps-5";
 import UnionsForTailwind from "./components/UnionsForTailwind-6";
+import EventHandlers from "./components/EventHandlers-7";
 
 export default function App() {
 	const [count, setCount] = useState(0);
@@ -51,6 +52,10 @@ export default function App() {
 				{/* You can't use different values rather than the ones we specifed before */}
 				<UnionsForTailwind color="red" size="lg" />
 				<UnionsForTailwind color="purple" size="md" />
+			</div>
+
+			<div>
+				<EventHandlers />
 			</div>
 		</>
 	);
